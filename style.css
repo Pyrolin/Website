@@ -17,6 +17,16 @@ body {
     text-align: center;
   }
 
+  .p2-container {
+    border: 1px solid #990000;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
   h3 {
   color: black;
   text-align: center;
@@ -24,14 +34,29 @@ body {
   margin: 0%;
   }
 
-  .selfie img {
-  width: 12%; /* Adjust width */
-  border-radius: 50%; /* Apply rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  filter: grayscale(20%); /* Apply grayscale effect */
-  
-  display: block;      /* Make image a block element */
-  margin: 0 auto;      /* Center horizontally */
+/* Center the link itself */
+.selfie {
+  display: inline-block; /* anchor fits the image */
+  text-align: center;    /* keep any content inside centered */
+}
+
+/* Center the .selfie block itself */
+.selfie-container {
+  text-align: center; /* center the inline-block link in the page */
+  margin: 20px 0;     /* some space above/below */
+}
+
+.selfie img {
+  width: 150px; /* fixed size so it's consistent */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  filter: grayscale(20%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selfie:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
 

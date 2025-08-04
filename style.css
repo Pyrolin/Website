@@ -1,0 +1,80 @@
+body {
+    background-color: lightgray;
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+  }
+  
+  .p1 {
+    color: black;
+    text-align: center;
+  }
+
+
+
+  h2 {
+    color: black;
+    text-align: center;
+  }
+
+  .p2 {
+    color: black;
+    text-align: center;
+  }
+
+  h3 {
+  color: black;
+  text-align: center;
+  }
+
+  .projects {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between project blocks */
+  margin-top: 20px;
+}
+
+.project {
+  text-align: center; /* Center the text above each image */
+}
+
+.project h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.project a img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project a img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+
+  footer {
+  background-color: #ccc; /* Grey background */
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Stays at the bottom after content */
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: navy;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

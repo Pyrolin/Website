@@ -12,13 +12,6 @@ body {
     text-align: center;
   }
 
-
-
-  h2 {
-    color: black;
-    text-align: center;
-  }
-
   .p2 {
     color: black;
     text-align: center;
@@ -27,13 +20,26 @@ body {
   h3 {
   color: black;
   text-align: center;
+  font-size: 25px;
+  margin: 0%;
   }
+
+  .selfie img {
+  width: 12%; /* Adjust width */
+  border-radius: 50%; /* Apply rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  filter: grayscale(20%); /* Apply grayscale effect */
+  
+  display: block;      /* Make image a block element */
+  margin: 0 auto;      /* Center horizontally */
+}
+
 
   .projects {
   display: flex;
   justify-content: center;
   gap: 40px; /* Space between project blocks */
-  margin-top: 20px;
+  margin: 0%;
 }
 
 .project {

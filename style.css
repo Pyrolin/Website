@@ -31,7 +31,7 @@ body {
 }
 
 .selfie img {
-  width: 150px;
+  width: 200px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   filter: grayscale(20%);

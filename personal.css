@@ -1,48 +1,33 @@
-body {
+ body {
     background-color: lightgray;
   }
-  
+ 
+ .p2 {
+    color: black;
+    text-align: center;
+  }
+
+  .p2-container {
+    border: 1px solid #990000;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
   h1 {
     color: black;
     text-align: center;
   }
-  
-  .p1 {
+
+  p {
     color: black;
     text-align: center;
   }
 
-
-  h3 {
-  color: black;
-  text-align: center;
-  font-size: 25px;
-  margin: 0%;
-  }
-
-.selfie {
-  display: inline-block;
-  text-align: center;
-}
-
-.selfie-container {
-  text-align: center;
-  margin: 20px 0; 
-}
-
-.selfie img {
-  width: 150px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  filter: grayscale(20%);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.selfie:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
+  
 .navbar {
   background-color: black;
   padding: 10px 0;
@@ -116,35 +101,20 @@ body {
   color: #ffcc00;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-body {
-  padding-top: 60px;
-}
-
-
-
-  .projects {
+.project-gallery {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin: 0%;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 1000px;
 }
 
-.project {
-  text-align: center;
-}
-
-.project h4 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #333;
-}
-
-.project a img {
+.project-image img {
   width: 300px;
   height: auto;
   border-radius: 8px;
@@ -152,13 +122,51 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project a img:hover {
+.project-image img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
 
-  footer {
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+body {
+  padding-top: 60px;
+}
+
+footer {
   background-color: #ccc;
   padding: 20px;
   text-align: center;

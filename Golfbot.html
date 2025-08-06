@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Golf Bot Project</title>
-<link rel="stylesheet" href="personal.css">
+  <title>Golf Bot Project</title>
+  <link rel="stylesheet" href="personal.css">
 </head>
 <body>
 
 <nav class="navbar">
   <ul>
     <li><a href="main.html">Home</a></li>
-
     <li class="dropdown">
       <a href="#">Projects ▾</a>
       <ul class="dropdown-content">
@@ -17,41 +16,70 @@
         <li><a href="Golfbot.html">Golf Bot Project</a></li>
       </ul>
     </li>
-
     <li><a href="Personal.html">About me</a></li>
   </ul>
 </nav>
 
 <h1>Golf Bot Project</h1>
 
-<p class ="p1">
-  This project was made for the course <strong>"CDIO"</strong> at DTU. 
-  We were tasked with creating a Lego Mindstorms robot that could move 
-  around a field, collect golf balls, and avoid obstacles.
-</p>
+<div class="project-layout">
+  <!-- Left: Text -->
+  <div class="p2-container">
+    <p class="p2">
+      <strong>Project Overview:</strong>  
+      [Briefly describe what the Golf Bot is, its purpose, and the overall idea behind it.]
+    </p>
 
-<div class="project-gallery">
-  <div class="project-image">
-    <img src="CDIO.png" alt="Golf Bot image 1" onclick="openLightbox(this)">
+    <p class="p2">
+      <strong>Goal:</strong>  
+      [Explain the problem you wanted to solve or the objective of building this project.]
+    </p>
+
+    <p class="p2">
+      <strong>My Role & Contributions:</strong>  
+      [Describe what you personally worked on — coding, design, testing, hardware integration, etc.]
+    </p>
+
+    <p class="p2">
+      <strong>Technologies Used:</strong>  
+      [List the programming languages, tools, and frameworks you used.]
+    </p>
+
+    <p class="p2">
+      <strong>Challenges & Solutions:</strong>  
+      [Mention one or two significant technical challenges you faced and how you solved them.]
+    </p>
+
+    <p class="p2">
+      <strong>Results:</strong>  
+      [Explain what you achieved — e.g., working prototype, improved accuracy, efficiency, competition results, etc.]
+    </p>
   </div>
-  <div class="project-image">
-    <img src="CDIO.png" alt="Golf Bot image 2" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="CDIO.png" alt="Golf Bot image 3" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="CDIO.png" alt="Golf Bot image 4" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="CDIO.png" alt="Golf Bot image 5" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="CDIO.png" alt="Golf Bot image 6" onclick="openLightbox(this)">
+
+  <!-- Right: Image Gallery -->
+  <div class="project-gallery">
+    <div class="project-image">
+      <img src="CDIO.png" alt="Golf Bot image 1" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="Golf Bot image 2" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="Golf Bot image 3" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="Golf Bot image 4" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="Golf Bot image 5" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="Golf Bot image 6" onclick="openLightbox(this)">
+    </div>
   </div>
 </div>
 
-
+<!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <span class="close">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
@@ -72,5 +100,6 @@ function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
 </script>
+
 </body>
 </html>

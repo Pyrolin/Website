@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Robo rally</title>
-<link rel="stylesheet" href="personal.css">
+  <title>Robo Rally</title>
+  <link rel="stylesheet" href="personal.css">
 </head>
 <body>
 
 <nav class="navbar">
   <ul>
     <li><a href="main.html">Home</a></li>
-
     <li class="dropdown">
       <a href="#">Projects ▾</a>
       <ul class="dropdown-content">
@@ -17,36 +16,70 @@
         <li><a href="Golfbot.html">Golf Bot Project</a></li>
       </ul>
     </li>
-
     <li><a href="Personal.html">About me</a></li>
   </ul>
 </nav>
 
-<h1>Robo rally in Java</h1>
-<p>Robo rally is a fun board game, but what if it was made in java? This group project was made as part of a course in DTU where me and 3 others were tasked with remaking the board game into a fully functional java version.</p>
+<h1>Robo Rally</h1>
 
-<!-- Project Images -->
-<div class="project-gallery">
-  <div class="project-image">
-    <img src="board1.png" alt="Golf Bot image 1" onclick="openLightbox(this)">
+<div class="project-layout">
+  <!-- Left: Text -->
+  <div class="p2-container">
+    <p class="p2">
+      <strong>Project Overview:</strong>  
+      [Briefly describe what Robo Rally is, its purpose, and the overall idea behind it.]
+    </p>
+
+    <p class="p2">
+      <strong>Goal:</strong>  
+      [Explain the objective of building Robo Rally and what you wanted to achieve.]
+    </p>
+
+    <p class="p2">
+      <strong>My Role & Contributions:</strong>  
+      [Describe your responsibilities — coding, UI design, testing, gameplay logic, etc.]
+    </p>
+
+    <p class="p2">
+      <strong>Technologies Used:</strong>  
+      [List programming languages, tools, and frameworks you used, e.g., Java, Swing, MVC architecture, etc.]
+    </p>
+
+    <p class="p2">
+      <strong>Challenges & Solutions:</strong>  
+      [Mention one or two significant technical or design challenges you faced and how you solved them.]
+    </p>
+
+    <p class="p2">
+      <strong>Results:</strong>  
+      [Explain the outcome — e.g., working game, gameplay features implemented, feedback from testers, etc.]
+    </p>
   </div>
-  <div class="project-image">
-    <img src="board2.png" alt="Golf Bot image 2" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="Roborally.png" alt="Golf Bot image 3" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="Roborally.png" alt="Golf Bot image 4" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="game.png" alt="Golf Bot image 5" onclick="openLightbox(this)">
-  </div>
-  <div class="project-image">
-    <img src="MVC Package diagram.png" alt="Golf Bot image 6" onclick="openLightbox(this)">
+
+  <!-- Right: Images -->
+  <div class="project-gallery">
+    <div class="project-image">
+      <img src="board1.png" alt="Robo Rally board 1" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="board2.png" alt="Robo Rally board 2" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="CDIO diagram" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="CDIO.png" alt="Another CDIO diagram" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="game.png" alt="Robo Rally gameplay" onclick="openLightbox(this)">
+    </div>
+    <div class="project-image">
+      <img src="MVC Package diagram.png" alt="MVC Package diagram" onclick="openLightbox(this)">
+    </div>
   </div>
 </div>
 
+<!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <span class="close">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
@@ -67,5 +100,6 @@ function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
 </script>
+
 </body>
 </html>

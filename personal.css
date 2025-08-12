@@ -1,6 +1,27 @@
- body {
-    background-color: lightgray;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, 
+    #e0e0e0,
+    #cfcfd1, 
+    #e0e0e0,
+    #cfcfd1);
+  background-size: 400% 400%;
+  animation: gradientShift 5s ease infinite;
+  padding-top: 60px;  /* Keep your current padding */
+  padding-bottom: 40px;
+}
+
  
  .p2 {
     color: black;
@@ -129,36 +150,73 @@
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
+/* LIGHTBOX CSS - add/replace these rules in personal.css */
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  inset: 0;
   background-color: rgba(0,0,0,0.9);
+  z-index: 9999;
+  
+  display: none;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically as a whole */
+  padding: 0;
+  margin: 0;
 }
 
+
+.lightbox.open {
+  display: flex !important; /* flex ensures center alignment */
+}
+
+
 .lightbox-content {
-  margin: auto;
-  display: block;
   max-width: 80%;
   max-height: 80%;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox.show .lightbox-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+#lightbox-caption {
+  color: #fff;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 16px;
+  max-width: 80%;
+
+  /* Start hidden for animation */
+  opacity: 0;
+  transform: translateY(10px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox.show #lightbox-caption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .close {
   position: absolute;
-  top: 20px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
+  top: 18px;
+  right: 20px;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
   cursor: pointer;
+  user-select: none;
+  z-index: 10000;
 }
+
 
 .close:hover {
   color: #ccc;

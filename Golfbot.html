@@ -64,7 +64,6 @@
     </p>
   </div>
 
-  <!-- Right: Image Gallery -->
   <div class="project-gallery">
     <div class="project-image">
       <img src="CDIO.png" alt="Golf Bot image 1" onclick="openLightbox(this)">
@@ -87,27 +86,45 @@
   </div>
 </div>
 
-<!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()">
+  <p id="lightbox-caption"></p>
 </div>
+
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("lightbox-caption");
+
+  lightboxImg.src = img.src;
+  caption.textContent = img.getAttribute('data-caption') || img.alt || '';
+
+  lightbox.style.display = "flex";
+
+  void lightbox.offsetWidth;
+
+  lightbox.classList.add("show");
+}
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.classList.remove("show");
+  document.body.style.overflow = "";
+
+  setTimeout(() => {
+    lightbox.style.display = "none";
+  }, 300);
+}
+
+</script>
 
 <footer>
   <a href="https://www.linkedin.com/in/mads-h-rasmussen-b71337342">LinkedIn</a> | 
   <a href="https://github.com/Pyrolin">GitHub</a>
 </footer>
 
-<script>
-function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "block";
-  document.getElementById("lightbox-img").src = img.src;
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
 
 </body>
 </html>

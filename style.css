@@ -1,6 +1,26 @@
-body {
-    background-color: lightgray;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, 
+    #e0e0e0,
+    #cfcfd1, 
+    #e0e0e0,
+    #cfcfd1);
+  background-size: 400% 400%;
+  animation: gradientShift 5s ease infinite;
+  padding-top: 60px;  /* Keep your current padding */
+  padding-bottom: 40px;
+}
   
   h1 {
     color: black;

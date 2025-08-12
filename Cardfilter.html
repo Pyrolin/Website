@@ -28,86 +28,98 @@
   <div class="p2-container">
     <p class="p2">
       <strong>Project Overview:</strong>  
-      [Briefly describe what the Golf Bot is, its purpose, and the overall idea behind it.]
-      The idea behind this project was to make an app that can search, filter and favorite cards from the card game "Magic the gathering".
+      The idea behind this project was to create an app that allows the user to search, filter and favorite cards from the card game "Magic the gathering".
     </p>
 
     <p class="p2">
       <strong>Goal:</strong>  
-      [Explain the problem you wanted to solve or the objective of building this project.]
-      The goal of this project is that it should make it easy for the user to be able to find the cards they want to play with or find and then favorite them, so that they can find them again later. The cards can be found by filtering for different attributes, so that the user can find exactly what they want to find. This should be done by using an API.
+      The goal of this project was to make it easy for users to find the cards they want to play with or collect and to save their favorites for quick access later. Users can filter cards by various attributes to find exactly what they need. This functionality was implemented using an API.
     </p>
 
     <p class="p2">
       <strong>My Role & Contributions:</strong>  
-      [Describe what you personally worked on — coding, design, testing, hardware integration, etc.]
-      Team management, coding of movement, computer vision.
+      I served as the Project Leader, ensuring all team members stayed active and on schedule. Additionally, I was responsible for UI design, coding the user interface, and creating various app scenes.
 
     </p>
 
     <p class="p2">
       <strong>Technologies Used:</strong>  
-      [List the programming languages, tools, and frameworks you used.]
-      Python, Git, ev3-micropython 2.0.0.
+      Android Studio, Figma, Kotlin, Scryfall API.
     </p>
 
     <p class="p2">
       <strong>Challenges & Solutions:</strong>  
-      [Mention one or two significant technical challenges you faced and how you solved them.]
-      Our computer vision initially had problems with differentiating the different objects on the course. This was solved by implementing a grid function, so that instead of looking on the field as a whole, the robot instead looks at all of the different grids, which gave it much more precise vision.
+      Initially, we had a problem with getting the filtering to work correctly. After examining exactly how the API pulls data, we learned that filtering parameters are added to the URL. For example, to search for blue cards we add something to the URL. This approach allowed us to only fetch the cards that matched the user's selected criteria.
     </p>
 
     <p class="p2">
       <strong>Results:</strong>  
-      [Explain what you achieved — e.g., working prototype, improved accuracy, efficiency, competition results, etc.]
-      We ended up getting 5th place in the final competition, which is something we were very happy with.
+      We ended up with a working prototype that performed really well, successfully filtering and displaying even the more obscure cards.
     </p>
   </div>
 
   <!-- Right: Image Gallery -->
   <div class="project-gallery">
     <div class="project-image">
-      <img src="CDIO.png" alt="Golf Bot image 1" onclick="openLightbox(this)">
+      <img src="app-protovsfinal.png" alt="Prototype on the left vs final on the right" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="Golf Bot image 2" onclick="openLightbox(this)">
+      <img src="app-navigationscreen.png" alt="The navigation diagram" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="Golf Bot image 3" onclick="openLightbox(this)">
+      <img src="app-finalscreens.png" alt="All screens." onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="Golf Bot image 4" onclick="openLightbox(this)">
+      <img src="app-dataflow.png" alt="Data flow for card data." onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="Golf Bot image 5" onclick="openLightbox(this)">
+      <img src="app-getquery.png" alt="Code snippet for getQuery used for filtering." onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="Golf Bot image 6" onclick="openLightbox(this)">
+      <img src="app-clickableimages.png" alt="Code snippet for clickable images." onclick="openLightbox(this)">
     </div>
   </div>
 </div>
 
-<!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()">
+  <p id="lightbox-caption"></p>
 </div>
+
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("lightbox-caption");
+
+  lightboxImg.src = img.src;
+  caption.textContent = img.getAttribute('data-caption') || img.alt || '';
+
+  lightbox.style.display = "flex";
+
+  // Force reflow so animations trigger
+  void lightbox.offsetWidth;
+
+  lightbox.classList.add("show");
+}
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.classList.remove("show");
+  document.body.style.overflow = ""; // restore scroll
+
+  setTimeout(() => {
+    lightbox.style.display = "none";
+  }, 300); // match CSS transition time
+}
+
+</script>
 
 <footer>
   <a href="https://www.linkedin.com/in/mads-h-rasmussen-b71337342">LinkedIn</a> | 
   <a href="https://github.com/Pyrolin">GitHub</a>
 </footer>
-
-<script>
-function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "block";
-  document.getElementById("lightbox-img").src = img.src;
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
 
 </body>
 </html>

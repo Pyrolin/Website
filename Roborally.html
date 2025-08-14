@@ -24,7 +24,6 @@
 <h1>Robo Rally</h1>
 
 <div class="project-layout">
-  <!-- Left: Text -->
   <div class="p2-container">
     <p class="p2">
       <strong>Project Overview:</strong>  
@@ -59,7 +58,6 @@
     </p>
   </div>
 
-  <!-- Right: Images -->
   <div class="project-gallery">
     <div class="project-image">
       <img src="board1.png" alt="Robo Rally board 1" onclick="openLightbox(this)">
@@ -68,10 +66,10 @@
       <img src="board2.png" alt="Robo Rally board 2" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="CDIO diagram" onclick="openLightbox(this)">
+      <img src="robo-ip.png" alt="When launching the game in multiplayer, you have to connect via an IP address" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="CDIO.png" alt="Another CDIO diagram" onclick="openLightbox(this)">
+      <img src="robo-code.png" alt="Code snippet for how we move the player on gears" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
       <img src="game.png" alt="Robo Rally gameplay" onclick="openLightbox(this)">
@@ -99,7 +97,7 @@ function openLightbox(img) {
 
   lightbox.style.display = "flex";
 
-  // Force reflow so animations trigger
+
   void lightbox.offsetWidth;
 
   lightbox.classList.add("show");
@@ -108,11 +106,11 @@ function closeLightbox() {
   const lightbox = document.getElementById("lightbox");
 
   lightbox.classList.remove("show");
-  document.body.style.overflow = ""; // restore scroll
+  document.body.style.overflow = "";
 
   setTimeout(() => {
     lightbox.style.display = "none";
-  }, 300); // match CSS transition time
+  }, 300);
 }
 
 </script>

@@ -24,7 +24,6 @@
 <h1>Card Filtering app</h1>
 
 <div class="project-layout">
-  <!-- Left: Text -->
   <div class="p2-container">
     <p class="p2">
       <strong>Project Overview:</strong>  
@@ -58,7 +57,6 @@
     </p>
   </div>
 
-  <!-- Right: Image Gallery -->
   <div class="project-gallery">
     <div class="project-image">
       <img src="app-protovsfinal.png" alt="Prototype on the left vs final on the right" onclick="openLightbox(this)">
@@ -98,7 +96,6 @@ function openLightbox(img) {
 
   lightbox.style.display = "flex";
 
-  // Force reflow so animations trigger
   void lightbox.offsetWidth;
 
   lightbox.classList.add("show");
@@ -107,11 +104,11 @@ function closeLightbox() {
   const lightbox = document.getElementById("lightbox");
 
   lightbox.classList.remove("show");
-  document.body.style.overflow = ""; // restore scroll
+  document.body.style.overflow = "";
 
   setTimeout(() => {
     lightbox.style.display = "none";
-  }, 300); // match CSS transition time
+  }, 300);
 }
 
 </script>

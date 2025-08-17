@@ -27,6 +27,17 @@ body {
   overflow-y: scroll;
 }
 
+<span class="logo">&lt;/&gt;</span>
+
+<style>
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4CAF50; /* green, pick your brand color */
+    font-family: monospace;
+  }
+</style>
+
 
  .p2 {
     color: black;

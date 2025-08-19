@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Robo Rally</title>
+  <title>Web store</title>
   <link rel="stylesheet" href="personal.css">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
@@ -24,66 +24,68 @@
   </ul>
 </nav>
 
-<h1>Robo Rally</h1>
+<h1>Webshop project</h1>
 
 <div class="project-layout">
   <div class="p2-container">
     <p class="p2">
       <strong>Project Overview:</strong>  
       <br>
-      Robo rally is a board game in which the players control different robots, that they then control by placing down cards that say "Go forward", "Go left" and so on. The goal of the game is to get to the end of the course before your compettition does.
+      This project was done as part of the "Front End Web Technology" course at DTU. We as a group were only allowed to use React, Typescript, CSS and Vite. With this we should create a checkout flow for an online store.
     </p>
 
     <p class="p2">
-      <strong>Goal:</strong> 
-      <br> 
-      We were tasked with making a Java version of Robo rally. This version behave similar to the board game version and include a way to play with a friend.
+      <strong>Goal:</strong>  
+      <br>
+      The goal of this project was to create the checkout flow for an online store (Front-end only).
     </p>
 
     <p class="p2">
       <strong>My Role & Contributions:</strong>  
       <br>
-      Team management, Design of the board, Creating the board, Coding of player movement, Coding of some obstacles.
+      UX and UI, Routing, CSS. A small amount of state
     </p>
 
     <p class="p2">
       <strong>Technologies Used:</strong>  
       <br>
-      Java, Draw.IO, RESTful API (Spring boot), MoSCoW model, JSON, Databases, JUnit tests.
+      HTML, CSS, Typescript, Vite.
     </p>
 
     <p class="p2">
       <strong>Challenges & Solutions:</strong>  
       <br>
-      We had a problem with getting player movement to work correctly, however this was solved by making sure that each tile on the board also had a heading. This made it possible to always be able to call and move the player according to the tile they are standing on.
-
+      Initially, both faktura and leveringsinformation were displayed at the same time, which made the interface cluttered and confusing. This was solved by introducting a toggle for faktura. This simplified the experience and still allowing flexibility when users required different billing and delivery addresses.
+      <br>
+      <br>
+      Another challenge that we faced was deciding when to use React useState vs React Context. We ended up using useState for isolated, simple interactions and reserved React COntext for shared state across multiple components. This kept the codebase understandable for the project scope, and allowing us to refactor in the future.
     </p>
 
     <p class="p2">
-      <strong>Results:</strong>  
-      <br>
-      We ended up getting a working game with working multiplayer so we are very happy in that regard. If we had more time, we would be able to
+      <strong>Results:</strong>
+      <br>  
+      We ended up with a webshop that worked, allowing the customer to pick and choose to remove/add products from the checkout, and to then allowing them to enter their payment options. We were very happy withn the fact that we got all the requirements done.
     </p>
   </div>
 
   <div class="project-gallery">
     <div class="project-image">
-      <img src="board1.png" alt="Robo Rally board 1" onclick="openLightbox(this)">
+      <img src="shop-checkout.png" alt="The checkout for the shop" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="board2.png" alt="Robo Rally board 2" onclick="openLightbox(this)">
+      <img src="shop-faktura.png" alt="The delivery and payment options" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="robo-ip.png" alt="When launching the game in multiplayer, you have to connect via an IP address" onclick="openLightbox(this)">
+      <img src="shop-conditions.png" alt="The terms and conditions" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="robo-code.png" alt="Code snippet for how we move the player on gears" onclick="openLightbox(this)">
+      <img src="shop-appfunct.png" alt="Creating an array of items in the shopping cart" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="game.png" alt="Robo Rally gameplay" onclick="openLightbox(this)">
+      <img src="shop-css.png" alt="Some of the CSS for the webshop" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="MVC Package diagram.png" alt="MVC Package diagram" onclick="openLightbox(this)">
+      <img src="shop-verifynumber.png" alt="Function that validates phone numbers based on the selected county" onclick="openLightbox(this)">
     </div>
   </div>
 </div>
@@ -104,7 +106,6 @@ function openLightbox(img) {
   caption.textContent = img.getAttribute('data-caption') || img.alt || '';
 
   lightbox.style.display = "flex";
-
 
   void lightbox.offsetWidth;
 
@@ -127,6 +128,7 @@ function closeLightbox() {
   <a href="https://www.linkedin.com/in/mads-h-rasmussen-b71337342">LinkedIn</a> | 
   <a href="https://github.com/Pyrolin">GitHub</a>
 </footer>
+
 
 </body>
 </html>

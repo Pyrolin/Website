@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Robo Rally</title>
+  <title>Golf Bot Project</title>
   <link rel="stylesheet" href="personal.css">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
@@ -24,66 +24,69 @@
   </ul>
 </nav>
 
-<h1>Robo Rally</h1>
+<h1>Portfolio website</h1>
 
 <div class="project-layout">
   <div class="p2-container">
     <p class="p2">
       <strong>Project Overview:</strong>  
       <br>
-      Robo rally is a board game in which the players control different robots, that they then control by placing down cards that say "Go forward", "Go left" and so on. The goal of the game is to get to the end of the course before your compettition does.
+      This project was to make a portfolio so that i would have a place where i can easily display previous projects.
     </p>
 
     <p class="p2">
-      <strong>Goal:</strong> 
-      <br> 
-      We were tasked with making a Java version of Robo rally. This version behave similar to the board game version and include a way to play with a friend.
+      <strong>Goal:</strong>  
+      <br>
+      The goal of this project was to create a website where i can display my previous works, and also describe how i am as a person.
     </p>
 
     <p class="p2">
       <strong>My Role & Contributions:</strong>  
       <br>
-      Team management, Design of the board, Creating the board, Coding of player movement, Coding of some obstacles.
+      I did everything myself
+
     </p>
 
     <p class="p2">
-      <strong>Technologies Used:</strong>  
-      <br>
-      Java, Draw.IO, RESTful API (Spring boot), MoSCoW model, JSON, Databases, JUnit tests.
+      <strong>Technologies Used:</strong> 
+      <br> 
+      HTML, CSS, Javascript.
     </p>
 
     <p class="p2">
       <strong>Challenges & Solutions:</strong>  
       <br>
-      We had a problem with getting player movement to work correctly, however this was solved by making sure that each tile on the board also had a heading. This made it possible to always be able to call and move the player according to the tile they are standing on.
-
+      I initially had an issue with the header not being centered on the first page when compared to all of the other pages. I found out that this was due to the scroll bar. This was fixed however by ensuring that the vertical scrollbar is always visable.
+      <br>
+      <br>
+      I also faced a challenge of hosting the website. I ended up using github pages for this since its free and easy to set up. In the future i want to host it on a server, so that i can get my own domain.
     </p>
 
     <p class="p2">
       <strong>Results:</strong>  
       <br>
-      We ended up getting a working game with working multiplayer so we are very happy in that regard. If we had more time, we would be able to
+      The result of this is the page you are currently on!
     </p>
   </div>
 
   <div class="project-gallery">
     <div class="project-image">
-      <img src="board1.png" alt="Robo Rally board 1" onclick="openLightbox(this)">
+      <img src="port-navbar.png" alt="HTML code for the sites navbar" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="board2.png" alt="Robo Rally board 2" onclick="openLightbox(this)">
+      <img src="port-animation.png" alt="CSS code for the subtle background animation" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="robo-ip.png" alt="When launching the game in multiplayer, you have to connect via an IP address" onclick="openLightbox(this)">
+      <img src="port-javascript.png" alt="Javascript for when clicking on an image" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="robo-code.png" alt="Code snippet for how we move the player on gears" onclick="openLightbox(this)">
+      <img src="port-front.png" alt="The front page of the portfolio" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="game.png" alt="Robo Rally gameplay" onclick="openLightbox(this)">
+      <img src="port-pages.png" alt="The site is hosted on github pages" onclick="openLightbox(this)">
     </div>
     <div class="project-image">
-      <img src="MVC Package diagram.png" alt="MVC Package diagram" onclick="openLightbox(this)">
+      <img src="port-projectcss.png" alt="CSS code for the project section" onclick="openLightbox(this)">
     </div>
   </div>
 </div>
@@ -104,7 +107,6 @@ function openLightbox(img) {
   caption.textContent = img.getAttribute('data-caption') || img.alt || '';
 
   lightbox.style.display = "flex";
-
 
   void lightbox.offsetWidth;
 
@@ -127,6 +129,7 @@ function closeLightbox() {
   <a href="https://www.linkedin.com/in/mads-h-rasmussen-b71337342">LinkedIn</a> | 
   <a href="https://github.com/Pyrolin">GitHub</a>
 </footer>
+
 
 </body>
 </html>
